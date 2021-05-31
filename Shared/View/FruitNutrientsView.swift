@@ -11,6 +11,7 @@ struct FruitNutrientsView: View {
     //MARK: - PROPERTIES
     var fruit: Fruit
     let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
+    let symbols: [String] = ["bolt.fill", "bolt.heart.fill", "seal.fill", "scalemass.fill", "pills.fill", "staroflife.fill" ]
     
     //MARK: - BODY
     var body: some View {
@@ -21,7 +22,7 @@ struct FruitNutrientsView: View {
                     
                     HStack {
                         Group {
-                            Image(systemName: "info.circle")
+                            Image(systemName: symbols[item])
                             Text(nutrients[item])
                         }
                         .foregroundColor(fruit.gradientColors[1])
